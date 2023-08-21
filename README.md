@@ -18,11 +18,13 @@ python3 main.py --help
 usage: main.py [-h] [-conf CONFIG_FILE] [-p PORT] [-log LOG_FILE] [-d DEBUG_LEVEL]
 
 optional arguments:
-  -h,                   --help                          show this help message and exit
-  -conf CONFIG_FILE,    --config_file   CONFIG_FILE     Location of the application config file (default: ./config.properties)
-  -p    PORT,           --port          PORT            Port (default: 8080)
-  -log  LOG_FILE,       --log_file      LOG_FILE        Location of the log file. Default is system log (default: None)
-  -d    DEBUG_LEVEL,    --debug_level   DEBUG_LEVEL     Debug Level CRITICAL/ERROR/WARNING/INFO/DEBUG. Default is WARNING (default: WARNING)
+  -h,                           --help                                  show this help message and exit
+  -conf     CONFIG_FILE,        --config_file       CONFIG_FILE         Location of the application config file (default: ./config.properties)
+  -p        PORT,               --port              PORT                Port (default: 8080)
+  -log      LOG_FILE,           --log_file          LOG_FILE            Location of the log file. Default is system log
+  -logsize  LOG_MAX_SIZE,       --log_max_size      LOG_MAX_SIZE        Max file size in MB before it is rotated. Set 0 to turn off log rotation (default: 1)
+  -logcount LOG_BACKUP_COUNT,   --log_backup_count  LOG_BACKUP_COUNT    Max number of rotated backup log file. (default: 5)
+  -d        DEBUG_LEVEL,        --debug_level       DEBUG_LEVEL         Debug Level CRITICAL/ERROR/WARNING/INFO/DEBUG. Default is WARNING (default: WARNING)
 ```
 
 ### Config file
