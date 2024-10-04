@@ -71,7 +71,8 @@ Success
 ```json
 {
     "status": 200,
-    "data": "1 2 test\n"
+    "data": "1 2 test\n",
+    "code": "Exit code from the target script."
 }
 ```
 Failed
