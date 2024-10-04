@@ -53,8 +53,11 @@ class APIResource(Resource):
         command = [self._config.target] + payload.args
         self._logger.info(f'Running command: {command}')
         result = subprocess.run(command, universal_newlines=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+        # Get return code from command
+        return_code = result.returncode
+        self._logger.info(f'Return code: {return_code}')
         self._logger.debug(f'Result: {result.stdout}')
-        return {'status': 200, 'data': result.stdout}, 200
+        return {'status': 200, 'data': result.stdout, 'code': return_code}, 200
 
 
     def process_get(self):
